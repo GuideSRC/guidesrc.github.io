@@ -1,0 +1,29 @@
+.headerLogo {
+    height: 50px;
+}
+
+header {
+    height: 60px;
+    background-color: white;
+    opacity: 0.8;
+}
+
+main {
+    background-color: lightgray;
+}
+
+.indexImage {
+    width: 100%;
+}
+
+.indexText {
+    text-align: center;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.homeLogo {
+    height: 200px;
+}
