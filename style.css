@@ -44,7 +44,6 @@ body {
 }
 
 .searchButtonHome {
-    border-radius: 8%;
     height: 50px;
     background-color: var(--uiColour);
     text-decoration: none;
@@ -57,7 +56,6 @@ body {
 }
 
 .homeSearch {
-    border-radius: 8%;
     height: 50px;
     background-color: var(--uiColour);
     text-decoration: none;
@@ -73,7 +71,6 @@ body {
 .textHome {
     height: 50px;
     border: 0cm;
-    border-radius: 2%;
     background-color: var(--textBoxBackgroundColour);
     font-family: 'Quicksand', sans-serif;
     font-size: 20pt;
@@ -88,7 +85,6 @@ body {
 }
 
 .linkButton {
-    border-radius: 2%;
     height: 50px;
     background-color: var(--uiColour);
     text-decoration: none;
@@ -121,7 +117,6 @@ body {
     width: 30px;
     align-content: center;
     margin: 0 auto;
-    border-radius: 50%;
     vertical-align: middle;
     font-size: 20px;
     color: gray;
