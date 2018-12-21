@@ -44,7 +44,7 @@ footer {
     margin-bottom: -16px;
     padding: 10px;
     background-color: var(--primaryColour);
-    color: black;
+    color: white;
 }
 
 a {
@@ -264,7 +264,7 @@ embed {
 
 .cutOff {
     text-overflow: ellipsis;
-    black-space: nowrap;
+    white-space: nowrap;
     overflow: hidden;
 }
 
