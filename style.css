@@ -1,15 +1,18 @@
+:root {
+    --backgroundColour: whitesmoke;
+    --textColour: lightgray;
+    --uiColour: #4688f2;
+    --uiHoverColour: #5c97f5;
+    --bodyTextColour: #000000;
+    --textBoxBackgroundColour: lightgray;
+}
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .headerLogo {
     height: 50px;
-}
-
-header {
-    height: 60px;
-    background-color: white;
-    opacity: 0.8;
-}
-
-main {
-    background-color: lightgray;
 }
 
 .indexImage {
@@ -22,8 +25,164 @@ main {
 
 body {
     font-family: 'Quicksand', sans-serif;
+    background-color: var(--backgroundColour);
 }
 
 .homeLogo {
-    height: 200px;
+    height: 50px;
+    align-content: center;
+    
+}
+
+.homeHeader {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+button {
+    border-radius: 8%;
+    height: 50px;
+    background-color: var(--uiColour);
+    text-decoration: none;
+    border: 0cm;
+    font-size: 20pt;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--textColour);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.homeSearch {
+    border-radius: 8%;
+    height: 50px;
+    background-color: var(--uiColour);
+    text-decoration: none;
+    border: 0cm;
+    font-size: 20pt;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--textColour);
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 6%;
+}
+
+.textHome {
+    height: 50px;
+    border: 0cm;
+    border-radius: 2%;
+    background-color: var(--textBoxBackgroundColour);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20pt;
+    padding-left: 12px;
+    width: 93%;
+}
+
+.or {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 25pt;
+}
+
+.createHome {
+    border-radius: 2%;
+    height: 50px;
+    background-color: var(--uiColour);
+    text-decoration: none;
+    border: 0cm;
+    font-size: 20pt;
+    font-family: 'Quicksand', sans-serif;
+    color: lightgray;
+    align-content: center;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.scrollDownHome {
+    text-align: center;
+}
+
+.arrow1 {
+    width: 100px;
+    height: 100px;
+    background: var(--uiColour);
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.arrow2 {
+    width: 60px;
+    height: 60px;
+    background-color: var(--uiColour);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    display: table;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.arrow2:before {
+    width: 52px;
+    height: 52px;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.arrow2 i.fa {
+    font-size: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.4, .4, .4);
+        transform: scale3d(.4, .4, .4);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.4, .4, .4);
+        transform: scale3d(.4, .4, .4);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    animation-iteration-count: infinite;
 }
