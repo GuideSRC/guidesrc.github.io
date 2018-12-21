@@ -1,124 +1,642 @@
 :root {
-    --backgroundColour: whitesmoke;
-    --textColour: lightgray;
-    --uiColour: #4688f2;
-    --uiHoverColour: #5c97f5;
-    --bodyTextColour: #000000;
-    --textBoxBackgroundColour: lightgray;
-    --buttonGray: lightgray;
+    --primaryColour: #4688f2;
+    --secondaryColour: #5c97f5;
+    --secondaryLogoColour: #1566e9;
+    --badColour: rgba(0, 0, 0, 0.2);
+    --reallyBadColour: #ef2727;
+    --primaryBackgroundColour: #f2f2f2;
+    --secondaryBackgroundColour: #dbdbdb;
+    --highlightColour: #27ef70;
+    --secondaryHighlightColour: rgba(39, 239, 112, 0.2);
 }
 
 * {
-    font-family: 'Quicksand', sans-serif;
-}
-
-.headerLogo {
-    height: 50px;
-}
-
-.indexImage {
-    width: 100%;
-}
-
-.indexText {
-    text-align: center;
+    font-family: "Quicksand", sans-serif;
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: var(--backgroundColour);
+    background-color: var(--primaryBackgroundColour);
+    margin-bottom: 0;
 }
 
-.homeLogo {
-    height: 50px;
-    align-content: center;
-    
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 16px);
+    padding: 10px;
+    z-index: 1;
+    background-color: var(--secondaryBackgroundColour);
 }
 
-.homeHeader {
-    align-content: center;
-    align-items: center;
-    align-self: center;
-    height: 50px;
-    vertical-align: middle;
+main {
+    margin: 20px;
+    margin-top: 100px;
+    min-height: calc(100vh - 100px);
+    color: black;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-.searchButtonHome {
-    height: 50px;
-    background-color: var(--uiColour);
-    text-decoration: none;
-    border: 0cm;
-    font-size: 20pt;
-    font-family: 'Quicksand', sans-serif;
-    color: var(--textColour);
+footer {
+    width: calc(100% - 4px);
+    margin: -8px;
+    margin-bottom: -16px;
+    padding: 10px;
+    background-color: var(--primaryColour);
+    color: black;
+}
+
+a {
+    color: var(--secondaryLogoColour);
+}
+
+h2 {
+    font-size: 18pt
+}
+
+a.footer {
+    color: black;
+}
+
+a.hidden {
+    color: inherit;
+    text-decoration: inherit;
+    outline: unset!important;
+}
+
+a.pill {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    color: black;
+    background-color: var(--secondaryBackgroundColour);
+    text-decoration: none;
+    transition: 0.5s;
 }
 
-.homeSearch {
-    height: 50px;
-    background-color: var(--uiColour);
-    text-decoration: none;
-    border: 0cm;
-    font-size: 20pt;
-    font-family: 'Quicksand', sans-serif;
-    color: var(--textColour);
+a.pill.selected {
+    background-color: var(--primaryColour);
+}
+
+select.pill {
+    width: fit-content;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    padding: 5px;
     padding-left: 10px;
-    padding-right: 10px;
-    width: 6%;
-}
-
-.textHome {
-    height: 50px;
-    border: 0cm;
-    background-color: var(--textBoxBackgroundColour);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 20pt;
-    padding-left: 12px;
-    width: 93%;
-}
-
-.or {
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-    font-size: 25pt;
-}
-
-.linkButton {
-    height: 50px;
-    background-color: var(--uiColour);
+    padding-right: 5px;
+    color: black;
+    background-color: var(--secondaryBackgroundColour);
     text-decoration: none;
-    border: 0cm;
-    font-size: 20pt;
-    font-family: 'Quicksand', sans-serif;
-    color: lightgray;
-    align-content: center;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
-.scrollDownHome {
-    text-align: center;
+select.pill.selected {
+    background-color: var(--primaryColour);
 }
 
-.rightHeader {
-    align-content: right;
-    text-align: right;
-    margin: 0 auto;
-    padding-bottom: -100px;
+.filterBy {
+    line-height: 40px;
 }
 
-.headerCircleButton {
-    background-color: var(--buttonGray);
-    border: 0cm;
-    padding-bottom: -100px;
-    height: 30px;
-    width: 30px;
-    align-content: center;
-    margin: 0 auto;
-    vertical-align: middle;
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--primaryColour);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button.secondary {
+    background-color: var(--secondaryColour);
+}
+
+button.bad {
+    background-color: var(--badColour);
+}
+
+button.reallyBad {
+    background-color: var(--reallyBadColour);
+}
+
+button.highlight {
+    background-color: var(--highlightColour);
+    color: black;
+}
+
+button.search {
     font-size: 20px;
-    color: gray;
+    width: 100px;
+}
+
+button.corner {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1;
+}
+
+input, select {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: black;
+    color: black;
+    border: none;
+}
+
+select {
+    width: 238px;
+}
+
+input[disabled] {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    cursor: text;
+}
+
+input.fullWidth {
+    width: calc(100% - 40px);
+}
+
+input.search {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    width: calc(100% - 140px);
+}
+
+input[type="file"] {
+    background-color: transparent;
+    width: calc(100% - 40px);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+textarea {
+    width: calc(100% - 30px);
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: black;
+    color: black;
+    border: none;
+    resize: none;
+}
+
+hr {
+    width: calc(100% - 10px);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+code {
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: black;
+}
+
+i.button {
+    font-size: 14px!important;
+}
+
+embed {
+    height: 60vh;
+}
+
+.desktop {
+    display: unset;
+}
+
+.mobile {
+    display: none;
+}
+
+.notSignedIn {
+    display: none;
+}
+
+.signedIn {
+    display: none;
+}
+
+.notAdmin {
+    display: none;
+}
+
+.notAdminSpan {
+    display: none;
+}
+
+.admin {
+    display: none;
+}
+
+.adminSpan {
+    display: none;
+}
+
+.left {
+    text-align: left!important;
+}
+
+.center {
+    text-align: center!important;
+}
+
+.right {
+    text-align: right!important;
+}
+
+.floatLeft {
+    float: left!important;
+}
+
+.floatRight {
+    float: right!important;
+}
+
+.cutOff {
+    text-overflow: ellipsis;
+    black-space: nowrap;
+    overflow: hidden;
+}
+
+.dialogBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(107, 41, 239, 0.5);
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 30vh;
+    left: 30vw;
+    width: calc(40vw - 20px);
+    height: calc(40vh - 20px);
+    z-index: 3;
+    padding: 10px;
+    background-color: var(--primaryBackgroundColour);
+    color: black;
+}
+
+.dialogTitle {
+    margin: -10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: var(--primaryColour);
+    color: black;
+}
+
+.dialogContent {
+    margin: -10px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    height: calc(100% - 110px);
+    overflow-y: auto;
+}
+
+.dialogActions {
+    margin: -10px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 45px;
+    text-align: right;
+}
+
+.card {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.centre-card {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    align-content: center;
     text-align: center;
+}
+
+.card.coloured {
+    background-color: var(--primaryColour);
+}
+
+.card.profile {
+    height: 80px;
+}
+
+.card.search {
+    background-color: transparent;
+    margin: -5px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.itemHolder {
+    margin-left: -5px;
+    margin-right: -6px;
+    overflow: auto;
+}
+
+.item {
+    width: calc(33.3% - 30px);
+    margin: 5px;
+    padding: 10px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.item.coloured {
+    background-color: var(--primaryColour);
+}
+
+.itemThumbnailHolder {
+    height: 15vw;
+    overflow: hidden;
+    margin: -10px;
+    margin-bottom: 0px;
+}
+
+.itemThumbnail {
+    width: calc(100% + 20px);
+    margin: -10px;
+}
+
+.itemTitle {
+    margin: 5px;
+}
+
+.adContainer {
+    margin: -10px;
+    padding: 8px;
+    min-height: 50px;
+    transition: 1s;
+}
+
+.adContainer:hover {
+    background-color: var(--secondaryHighlightColour);
+}
+
+.adIcon {
+    position: relative;
+    top: -19px;
+    width: fit-content;
+    margin-right: -10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    background-color: var(--highlightColour);
+    color: black;
+}
+
+.postItem {
+    height: calc(15vw + 80px);
+}
+
+.postByPrefix {
+    padding-left: 5px;
+}
+
+.profileInfo {
+    margin-left: 10px;
+    width: calc(100% - 90px);
+}
+
+.options {
+    float: right;
+    margin-right: -8px;
+}
+
+.loader {
+    margin: 20px;
+    font-size: 64px!important;
+    color: var(--secondaryBackgroundColour);
+    cursor: default;
+    transition: 1.5s;
+}
+
+.loaderHolder {
+    text-align: center;
+}
+
+.skipTo {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    margin: 5px;
+    padding: 20px;
+    text-decoration: none;
+    background-color: var(--primaryColour);
+    color: black;
+    z-index: 2;
+    outline: none;
+    transition: 0.2s;
+}
+
+.skipTo:focus, .skipTo:active {
+    left: 0;
+}
+
+.headerRight {
+    float: right;
+    height: 100%;
+}
+
+.headerButton {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.headerButton.selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.headerButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.headerButton.logo {
+    margin: unset;
+    padding: unset;
+}
+
+.headerButton.logo:hover {
+    background-color: unset;
+}
+
+.accountPicture, .profilePicture {
+    width: 80px;
+    height: 80px;
+}
+
+.accountPicture.small, .profilePicture.small {
+    width: 40px;
+    height: 40px;
+}
+
+.creatorAccountPicture {
+    width: 80px;
+    height: 80px;
+}
+
+.creatorAccountPicture.small {
+    width: 40px;
+    height: 40px;
+}
+
+.aboutLogo {
+    height: 20px;
+    width: 20px;
+}
+
+.postUploadField {
+    width: calc(25% - 33px);
+}
+
+select.postUploadField {
+    width: calc(25% - 13px);
+}
+
+.comment {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.comment:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.commentDate {
+    color: #aeaeae;
+}
+
+.commentContent {
+    margin-top: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+#signIn {
+    display: none;
+}
+
+#signUp {
+    display: none;
+}
+
+#headerLogo {
+    height: 50px;
+}
+
+#form {
+    width: 100%;
+    height: 930px;
+    border: none;
+}
+
+#postFrame {
+    display: none;
+}
+
+#postIframe {
+    width: calc(100% - 10px);
+    height: 35vw;
+    border: none;
+}
+
+#postExitFullscreen {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    main {
+        width: calc(100vw - 54px)!important;
+        padding-left: unset;
+        padding-right: unset;
+    }
+    
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: unset;
+    }
+
+    .dialog {
+        left: 10vw;
+        width: calc(80vw - 20px);
+    }
+
+    .itemThumbnailHolder {
+        height: 20vw;
+    }
+
+    .postItem {
+        height: calc(20vw + 80px);
+    }
+}
+
+@media (max-width: 600px) {
+    .item {
+        width: calc(100% - 31px);
+        margin-bottom: 10px;
+        float: none;
+    }
+
+    .itemThumbnailHolder {
+        height: 50vw;
+    }
+
+    .itemThumbnail {
+        margin-top: -5%;
+    }
+
+    .postItem {
+        height: calc(50vw + 80px);
+    }
+    
+    .postUploadField {
+        width: calc(100% - 30px);
+    }
+    
+    select.postUploadField {
+        width: calc(100% - 10px);
+    }
+}
+
+@media (max-width: 400px) {
+    .headerButton {
+        font-size: 16px;
+    }
+}
+
+@media (max-height: 500px) {
+    .dialog {
+        top: 20vh;
+        left: 30vw;
+        width: calc(40vw - 20px);
+        height: calc(60vh - 20px);
+    }
 }

@@ -1,27 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128441061-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          
+          gtag('config', 'UA-128441061-1');
+        </script>
+        <!-- Yandex Verification -->
+        <meta name="yandex-verification" content="332bcd39873f7799" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8596041573995010",
+          enable_page_level_ads: true
+          });
+        </script>
         <title>GuideSRC</title>
-        <link rel="shortcut icon" href="media/SMALL.png">
+        <link rel="shortcut icon" href="media/Small.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Material+Icons">
         <link rel="stylesheet" href="style.css">
-        <meta name="theme-color" content="#4688f2">
-        <script type="text/javascript" src="script.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <script src="lib/showdown.min.js"></script>
+        <meta name="theme-color" content="#6b29ef">
+        <link rel="apple-touch-icon" href="media/Apple Touch Icon.png">
+        <script src="lib/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyCgGrYsZ0R5Bg-Svoz4qh0CfcvGaG5xJNo",
+                authDomain: "GuideSRC-web.firebaseapp.com",
+                databaseURL: "https://GuideSRC-web.firebaseio.com",
+                projectId: "GuideSRC-web",
+                storageBucket: "GuideSRC-web.appspot.com",
+                messagingSenderId: "1085599545540"
+            };
+            
+            firebase.initializeApp(config);
+        </script>
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     </head>
     <body>
-        <header class="homeHeader">
-            <a href="index.html"><img src="media/Text.svg" class="homeLogo"></a>
-            <div class="rightHeader">
-                <button class="headerCircleButton"><i class="fa fa-search"></i></button>
+        <a class="skipTo" href="#content">Skip to content</a>
+        <a class="skipTo" href="#footer">Skip to footer</a>
+        <header>
+            <span class="desktop">
+                <a href="index.html" title="Go to main page" class="headerButton logo">
+                    <img src="media/Large.png" alt="GuideSRC logo" id="headerLogo" />
+                </a>
+            </span>
+            <span class="mobile">
+                <a href="index.html" title="Go to main page" class="headerButton logo">
+                    <img src="media/Small.png" alt="GuideSRC logo" id="headerLogo" />
+                </a>
+            </span>
+            <div class="headerRight">
+                <a href="index.html" class="headerButton selected">Posts</a>
+                <a href="itinerary.html" class="headerButton">Itinerary</a>
+                <a href="account.html" class="headerButton">Account</a>
             </div>
         </header>
-        <br>
-        <input type="text" name="fname" class="textHome" placeholder="Search for a pre-made guide">
-        <button onclick="window.location.href='index.html'" class="searchButtonHome"><i class="fa fa-search"></i></button>
-        <br>
-        <h2 class="or">-OR-</h2>
-        <br>
-        <button class="linkButton">Create a personal guide</button><br>
+        <main id="content">
+            <h1 class="center">The public travel guide.</h1>
+            <div class="card search">
+                <input placeholder="Search for a guide..." id="searchBar" class="search"></input><button onclick="performSearch($('#searchBar').val());" class="search">Search</button>
+            </div>
+            <div id="gameLoader" class="loaderHolder"><i aria-label="Loading content..." class="material-icons loader">airplanemode_active</i></div>
+            <div id="gameList" class="itemHolder"></div>
+        </main>
+        <div class="dialogBackground"></div>
+        <div class="dialog"></div>
+        <footer import="/footer.html" id="footer"></footer>
     </body>
 </html>
