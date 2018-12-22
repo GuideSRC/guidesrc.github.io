@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128441061-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          
+          gtag('config', 'UA-128441061-1');
+        </script>
+        <!-- Yandex Verification -->
+        <meta name="yandex-verification" content="332bcd39873f7799" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8596041573995010",
+          enable_page_level_ads: true
+          });
+        </script>
+        <title>GuideSRC</title>
+        <link rel="shortcut icon" href="media/Small.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Material+Icons">
+        <link rel="stylesheet" href="style.css">
+        <script src="lib/showdown.min.js"></script>
+        <meta name="theme-color" content="#6b29ef">
+        <link rel="apple-touch-icon" href="media/Apple Touch Icon.png">
+        <script src="lib/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDVuWK1Hrj7dlV6YZJNFDu1fOo8_jXii0A",
+                authDomain: "guidesrc-web.firebaseapp.com",
+                databaseURL: "https://guidesrc-web.firebaseio.com",
+                projectId: "guidesrc-web",
+                storageBucket: "guidesrc-web.appspot.com",
+                messagingSenderId: "808388212268"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    </head>
+    <body>
+        <a class="skipTo" href="#content">Skip to content</a>
+        <a class="skipTo" href="#footer">Skip to footer</a>
+        <header>
+            <span class="desktop">
+                <a href="index.html" title="Go to main page" class="headerButton logo">
+                    <img src="media/Large.png" alt="GuideSRC logo" id="headerLogo" />
+                </a>
+            </span>
+            <span class="mobile">
+                <a href="index.html" title="Go to main page" class="headerButton logo">
+                    <img src="media/Small.png" alt="GuideSRC logo" id="headerLogo" />
+                </a>
+            </span>
+            <div class="headerRight">
+                <a href="index.html" class="headerButton selected">Posts</a>
+                <a href="itinerary.html" class="headerButton">Itinerary</a>
+                <a href="account.html" class="headerButton">Account</a>
+            </div>
+        </header>
+        <main id="content">
+            <h1 class="center">Oops!</h1>
+            <div class="card center">
+                <p><strong>404:</strong> We couldn't find that page.</p>
+                <button onclick="window.location.href = 'index.html';">Go Home</button>
+            </div>
+        </main>
+        <div class="dialogBackground"></div>
+        <div class="dialog"></div>
+        <footer import="/footer.html" id="footer"></footer>
+    </body>
+</html>

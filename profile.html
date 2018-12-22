@@ -10,22 +10,11 @@
           
           gtag('config', 'UA-128441061-1');
         </script>
-        <!-- Yandex Verification -->
-        <meta name="yandex-verification" content="332bcd39873f7799" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-8596041573995010",
-          enable_page_level_ads: true
-          });
-        </script>
         <title>GuideSRC</title>
         <link rel="shortcut icon" href="media/Small.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Material+Icons">
         <link rel="stylesheet" href="style.css">
         <script src="lib/showdown.min.js"></script>
-        <meta name="theme-color" content="#6b29ef">
-        <link rel="apple-touch-icon" href="media/Apple Touch Icon.png">
         <script src="lib/jquery.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
         <script>
@@ -58,25 +47,35 @@
                 </a>
             </span>
             <div class="headerRight">
-                <a href="index.html" class="headerButton selected">Posts</a>
+                <a href="index.html" class="headerButton">Posts</a>
                 <a href="itinerary.html" class="headerButton">Itinerary</a>
-                <a href="account.html" class="headerButton">Account</a>
+                <a href="account.html" class="headerButton selected">Account</a>
             </div>
         </header>
         <main id="content">
-            <h1 class="center">The public travel guide.</h1>
-            <div class="card search">
-                <input placeholder="Search for a guide..." id="searchBar" class="search"></input><button onclick="performSearch($('#searchBar').val());" class="search">Search</button>
+                <h1 class="center">Profile</h1>
+                <div class="card coloured profile">
+                    <div>
+                        <img src="media/AnonUser.png" class="profilePicture floatLeft" />
+                    </div>
+                    <div class="floatLeft profileInfo">
+                        <strong class="profileName">Loading...</strong><br>
+                        Online
+                    </div>
+                </div>
+                <h2 class="center">Uploaded Posts</h2>
+                <div id="gameLoader" class="loaderHolder"><i aria-label="Loading content..." class="material-icons loader">videogame_asset</i></div>
+                <div id="gameList" class="itemHolder"></div>
+            </main>
+            <div class="dialogBackground"></div>
+            <div class="dialog">
+                Hi!
             </div>
-            <div id="postLoader" class="loaderHolder"><i aria-label="Loading content..." class="material-icons loader">airplanemode_active</i></div>
-            <div id="postList" class="itemHolder"></div>
-        </main>
-        <div class="dialogBackground"></div>
-        <div class="dialog"></div>
-        <footer import="/footer.html" id="footer"></footer>
-        <script src="profanityFilter.js"></script>
-        <script src="staffList.js"></script>
-        <script src="account.js"></script>
-        <script src="postList.js"></script>
+            <footer import="/footer.html" id="footer"></footer>
+            <script src="profanityFilter.js"></script>
+            <script src="staffList.js"></script>
+            <script src="account.js"></script>
+            <script src="profile.js"></script>
+            <script src="profilePostList.js"></script>
     </body>
 </html>

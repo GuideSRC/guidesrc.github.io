@@ -10,22 +10,11 @@
           
           gtag('config', 'UA-128441061-1');
         </script>
-        <!-- Yandex Verification -->
-        <meta name="yandex-verification" content="332bcd39873f7799" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-8596041573995010",
-          enable_page_level_ads: true
-          });
-        </script>
         <title>GuideSRC</title>
         <link rel="shortcut icon" href="media/Small.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Material+Icons">
         <link rel="stylesheet" href="style.css">
         <script src="lib/showdown.min.js"></script>
-        <meta name="theme-color" content="#6b29ef">
-        <link rel="apple-touch-icon" href="media/Apple Touch Icon.png">
         <script src="lib/jquery.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
         <script>
@@ -58,25 +47,40 @@
                 </a>
             </span>
             <div class="headerRight">
-                <a href="index.html" class="headerButton selected">Posts</a>
+                <a href="index.html" class="headerButton">Posts</a>
                 <a href="itinerary.html" class="headerButton">Itinerary</a>
-                <a href="account.html" class="headerButton">Account</a>
+                <a href="account.html" class="headerButton selected">Account</a>
             </div>
         </header>
         <main id="content">
-            <h1 class="center">The public travel guide.</h1>
-            <div class="card search">
-                <input placeholder="Search for a guide..." id="searchBar" class="search"></input><button onclick="performSearch($('#searchBar').val());" class="search">Search</button>
+            <h1 class="center">Settings</h1>
+            <div class="card center notSignedIn">
+                <h2>Sorry!</h2>
+                <p>To access settings for your account, please sign in.</p>
+                <button onclick="window.location.href='account.html'">Sign In</button>
             </div>
-            <div id="postLoader" class="loaderHolder"><i aria-label="Loading content..." class="material-icons loader">airplanemode_active</i></div>
-            <div id="postList" class="itemHolder"></div>
+            <div class="card coloured signedIn">
+                Customise your account. <button onclick="window.location.href = 'account.html';" class="secondary">Back</button>
+            </div>
+            <div class="card signedIn">
+                <h2>Profile Picture</h2>
+                <img src="media/AnonUser.png" class="accountPicture" /><br>
+                Upload Profile picture:<br><input type="file" id="ppicFile" name="file" accept="image/png" /><br>
+                <small>Be patient! Account pictures can take time to update.</small>
+            </div>
+            <div class="card signedIn">
+                <h2>Username</h2>
+                Current Username: <strong class="accountName">Loading...</strong><br>
+                New Username:<br><input id="nameSet"></input><button onclick="setName(profanity.clean($('#nameSet').val()));">Set</button>
+            </div>
         </main>
         <div class="dialogBackground"></div>
-        <div class="dialog"></div>
+        <div class="dialog">
+            Hi!
+        </div>
         <footer import="/footer.html" id="footer"></footer>
         <script src="profanityFilter.js"></script>
         <script src="staffList.js"></script>
         <script src="account.js"></script>
-        <script src="postList.js"></script>
     </body>
 </html>

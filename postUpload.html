@@ -10,22 +10,11 @@
           
           gtag('config', 'UA-128441061-1');
         </script>
-        <!-- Yandex Verification -->
-        <meta name="yandex-verification" content="332bcd39873f7799" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-8596041573995010",
-          enable_page_level_ads: true
-          });
-        </script>
         <title>GuideSRC</title>
         <link rel="shortcut icon" href="media/Small.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Material+Icons">
         <link rel="stylesheet" href="style.css">
         <script src="lib/showdown.min.js"></script>
-        <meta name="theme-color" content="#6b29ef">
-        <link rel="apple-touch-icon" href="media/Apple Touch Icon.png">
         <script src="lib/jquery.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
         <script>
@@ -58,25 +47,42 @@
                 </a>
             </span>
             <div class="headerRight">
-                <a href="index.html" class="headerButton selected">Posts</a>
+                <a href="index.html" class="headerButton">Posts</a>
                 <a href="itinerary.html" class="headerButton">Itinerary</a>
-                <a href="account.html" class="headerButton">Account</a>
+                <a href="account.html" class="headerButton selected">Account</a>
             </div>
         </header>
         <main id="content">
-            <h1 class="center">The public travel guide.</h1>
-            <div class="card search">
-                <input placeholder="Search for a guide..." id="searchBar" class="search"></input><button onclick="performSearch($('#searchBar').val());" class="search">Search</button>
+            <h1 class="center">Upload Post</h1>
+            <div class="card center notSignedIn">
+                <h2>Sorry!</h2>
+                <p>To access post uploading for your account, please sign in.</p>
+                <button onclick="window.location.href = 'account.html'">Sign In</button>
             </div>
-            <div id="postLoader" class="loaderHolder"><i aria-label="Loading content..." class="material-icons loader">airplanemode_active</i></div>
-            <div id="postList" class="itemHolder"></div>
+            <div class="card coloured signedIn">
+                Get likes and appreciation for uploading a new post. <button onclick="window.location.href = 'account.html';" class="secondary">Back</button>
+            </div>
+            <div class="card signedIn">
+                <div class="center">
+                    <input placeholder="Title" class="postUploadField" id="postTitle"></input>
+                    <input placeholder="Image" class="postUploadField" id="postImage"></input>
+                    <input placeholder="Location" class="postUploadField" id="postLocation"></input>
+                </div>
+                <textarea type="multiline" rows="5" placeholder="Write your post here..." id="postContent"></textarea><br>
+                <small>You can use Markdown: <strong>**bold**</strong>, <em>*italic*</em>, <code>`code`</code>, <a href="javascript:alert('Replace \'url\' with your custom URL!');">[link](url)</a> and much more!</small><br>
+                <div class="right"><button onclick="postUpload();" class="uploadPost">Upload Post</button></div>
+            </div>
+            <p class="center" id="error"></p>
+            <div class="center" id="pend"></div>
         </main>
         <div class="dialogBackground"></div>
-        <div class="dialog"></div>
+        <div class="dialog">
+            Hi!
+        </div>
         <footer import="/footer.html" id="footer"></footer>
         <script src="profanityFilter.js"></script>
         <script src="staffList.js"></script>
         <script src="account.js"></script>
-        <script src="postList.js"></script>
+        <script src="postUpload.js"></script>
     </body>
 </html>
